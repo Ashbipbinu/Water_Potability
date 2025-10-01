@@ -47,7 +47,7 @@ def save_metrics(metrics):
 
 def main():
     print("Loading the test data")
-    file_path = os.path.join(os.getcwd(), "data", "processed", "test_processed.csv")
+    file_path = os.path.join(os.getcwd(), "data", "processed", "test_processed_mean.csv")
     test_data = load_data(file_path)
 
     print("Splitting the data")

@@ -43,10 +43,10 @@ def main():
     test_processed = check_for_missing_values(test_data)
 
     print("Saving train data")
-    save_data(train_processed, 'train_processed.csv')
+    save_data(train_processed, 'train_processed_mean.csv')
     
     print("Saving test data")
-    save_data(test_processed, 'test_processed.csv')
+    save_data(test_processed, 'test_processed_mean.csv')
 
 
 if __name__ == '__main__':

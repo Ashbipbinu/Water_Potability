@@ -30,7 +30,7 @@ def saving_model(model):
 def main():
 
     print("Loading the data")
-    file_path = os.path.join(os.getcwd(), 'data', 'processed', 'train_processed.csv')
+    file_path = os.path.join(os.getcwd(), 'data', 'processed', 'train_processed_mean.csv')
     train_data = load_data(file_path)
 
     print("Splitting the data into features and target")
