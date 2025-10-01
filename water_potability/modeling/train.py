@@ -1,30 +1,51 @@
-from pathlib import Path
+import os
+import pandas  as pd
+import pickle
 
-from loguru import logger
-from tqdm import tqdm
-import typer
+from sklearn.ensemble import RandomForestClassifier
 
-from water_potability.config import MODELS_DIR, PROCESSED_DATA_DIR
+def load_data(file_path):
+    return pd.read_csv(file_path)
 
-app = typer.Typer()
+def splitting_data_to_XY(data: pd.DataFrame):
+    X = data.drop(columns=['Potability'], axis=1)
+    y = data['Potability']
+
+    return (X, y)
+
+def model_training(model, X_data, y_data):
+    model.fit(X_data, y_data)
+
+    return model
+
+def saving_model(model):
+
+    directory = os.path.join(os.getcwd(), 'models')
+    os.makedirs(directory, exist_ok=True)
+
+    with open('model.pkl', 'wb') as file:
+        pickle.dump(model, file)
 
 
-@app.command()
-def main(
-    # ---- REPLACE DEFAULT PATHS AS APPROPRIATE ----
-    features_path: Path = PROCESSED_DATA_DIR / "features.csv",
-    labels_path: Path = PROCESSED_DATA_DIR / "labels.csv",
-    model_path: Path = MODELS_DIR / "model.pkl",
-    # -----------------------------------------
-):
-    # ---- REPLACE THIS WITH YOUR OWN CODE ----
-    logger.info("Training some model...")
-    for i in tqdm(range(10), total=10):
-        if i == 5:
-            logger.info("Something happened for iteration 5.")
-    logger.success("Modeling training complete.")
-    # -----------------------------------------
+def main():
+
+    print("Loading the data")
+    file_path = os.path.join(os.getcwd(), 'data', 'processed', 'train_processed.csv')
+    train_data = load_data(file_path)
+
+    print("Splitting the data into features and target")
+    X_train, y_train = splitting_data_to_XY(train_data)
+
+    rf = RandomForestClassifier(n_estimators=100, max_depth=3)
+
+    print("Model training started")   
+    model = model_training(rf,X_train, y_train)   
+
+    print("Saving the model") 
+    saving_model(model)
 
 
 if __name__ == "__main__":
-    app()
+    main()
+
+    print("Finished training")

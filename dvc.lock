@@ -1,0 +1,50 @@
+schema: '2.0'
+stages:
+  data_collection:
+    cmd: python water_potability/data/data_collection.py
+    deps:
+    - path: water_potability/data/data_collection.py
+      hash: md5
+      md5: 2e0e6f1b0f1363211a639f98c4e27406
+      size: 1130
+    outs:
+    - path: data/raw
+      hash: md5
+      md5: c0c2d65c14a603e91e029fda3c344a5c.dir
+      size: 522262
+      nfiles: 2
+  data_processed:
+    cmd: python water_potability/data/data_preprocessing.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: c0c2d65c14a603e91e029fda3c344a5c.dir
+      size: 522262
+      nfiles: 2
+    - path: water_potability/data/data_preprocessing.py
+      hash: md5
+      md5: fa4aea725276bb7d54b4beeb7f5c0c00
+      size: 1502
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: 5c7b21373b3274319ceb744454de82cd.dir
+      size: 553120
+      nfiles: 2
+  model_training:
+    cmd: python water_potability/modeling/train.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: 5c7b21373b3274319ceb744454de82cd.dir
+      size: 553120
+      nfiles: 2
+    - path: water_potability/modeling/train.py
+      hash: md5
+      md5: 39b9d02868d6ccd59e2b24680e99b917
+      size: 1206
+    outs:
+    - path: model.pkl
+      hash: md5
+      md5: 3a01bf389832274a9fddf12816a8fe5e
+      size: 143726

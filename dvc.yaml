@@ -1,0 +1,22 @@
+stages:
+  data_collection:
+    cmd: python water_potability/data/data_collection.py
+    deps:
+    - water_potability/data/data_collection.py
+    outs:
+    - data/raw
+
+  data_processed:
+    cmd: python water_potability/data/data_preprocessing.py
+    deps:
+    - data/raw
+    - water_potability/data/data_preprocessing.py
+    outs:
+    - data/processed
+  model_training:
+    cmd: python water_potability/modeling/train.py
+    deps:
+    - data/processed
+    - water_potability/modeling/train.py
+    outs:
+    - model.pkl
