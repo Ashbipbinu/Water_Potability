@@ -8,16 +8,16 @@ from sklearn.impute import KNNImputer
 def load_data(filepath):
     return pd.read_csv(filepath)
 
-def check_for_missing_values(data):
-    if data.isnull().values.any():
-        print("Missing values found. Starting imputation...")
+def check_for_missing_values(data: pd.DataFrame):
+    
+    data_copy = data.copy()
 
-        imputer = KNNImputer(n_neighbors=3)
-        imputed_data =  imputer.fit_transform(data)
-        return pd.DataFrame(imputed_data, columns=data.columns)
-    else:
-        print("No missing values found. Returning original data.")
-        return data
+    for col in data_copy.columns:
+        if data_copy[col].isna().any():
+            mean_value = data_copy[col].mean()
+            data_copy[col] = data_copy[col].fillna(mean_value, inplace=True)
+    
+    return data_copy
     
 def save_data(data, file_name):
     directory = os.path.join(os.getcwd(), "data", "processed")
