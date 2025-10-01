@@ -13,6 +13,7 @@ stages:
     - water_potability/data/data_preprocessing.py
     outs:
     - data/processed
+
   model_training:
     cmd: python water_potability/modeling/train.py
     deps:
@@ -20,3 +21,12 @@ stages:
     - water_potability/modeling/train.py
     outs:
     - model.pkl
+
+
+  model_evaluation:
+    cmd: python water_potability/modeling/evaluation.py
+    deps:
+    - model.pkl
+    - water_potability/modeling/evaluation.py
+    metrics:
+    - metrics.json
