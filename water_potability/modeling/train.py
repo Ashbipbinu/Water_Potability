@@ -1,8 +1,17 @@
 import os
 import pandas  as pd
 import pickle
+import yaml
 
 from sklearn.ensemble import RandomForestClassifier
+
+
+with open('params.yaml', 'r') as file:
+    params = yaml.safe_load(file)
+
+n_estimator = params['model_training']['n_estimators']
+max_depth = params['model_training']['max_depth']
+
 
 def load_data(file_path):
     return pd.read_csv(file_path)
@@ -36,7 +45,7 @@ def main():
     print("Splitting the data into features and target")
     X_train, y_train = splitting_data_to_XY(train_data)
 
-    rf = RandomForestClassifier(n_estimators=100, max_depth=3)
+    rf = RandomForestClassifier(n_estimators=n_estimator, max_depth=max_depth)
 
     print("Model training started")   
     model = model_training(rf,X_train, y_train)   
