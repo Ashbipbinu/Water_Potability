@@ -41,20 +41,20 @@ stages:
       nfiles: 2
     - path: water_potability/modeling/train.py
       hash: md5
-      md5: e909b1046a630e7704fb5d5d8a6618d0
-      size: 1211
+      md5: 20904a6ed86320ce5055b92ad7adda89
+      size: 1430
     outs:
     - path: model.pkl
       hash: md5
-      md5: 84a8c5ff47dbb211af187b29d46b77c6
-      size: 140686
+      md5: 7ebe4a998229db0f98bbc47b8e66ed40
+      size: 137326
   model_evaluation:
     cmd: python water_potability/modeling/evaluation.py
     deps:
     - path: model.pkl
       hash: md5
-      md5: 84a8c5ff47dbb211af187b29d46b77c6
-      size: 140686
+      md5: 7ebe4a998229db0f98bbc47b8e66ed40
+      size: 137326
     - path: water_potability/modeling/evaluation.py
       hash: md5
       md5: 68fbbc52a64caf29d557f6c7a147d865
@@ -62,5 +62,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: de8c0b00547f1d9d863b4da26889e275
-      size: 164
+      md5: 53870e2c97bb835a2ac2a486ff25b451
+      size: 166
