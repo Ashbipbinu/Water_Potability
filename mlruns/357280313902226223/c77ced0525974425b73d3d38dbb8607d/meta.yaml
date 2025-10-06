@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/357280313902226223/c77ced0525974425b73d3d38dbb8607d/artifacts
+end_time: 1759739071867
+entry_point_name: ''
+experiment_id: '357280313902226223'
+lifecycle_stage: active
+run_id: c77ced0525974425b73d3d38dbb8607d
+run_name: fearless-duck-390
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759739036886
+status: 3
+tags: []
+user_id: LENOVO

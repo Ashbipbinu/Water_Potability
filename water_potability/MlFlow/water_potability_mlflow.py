@@ -14,7 +14,8 @@ mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
 new_Experiment = "Water_Potability_Classification"
 
-experiment_id = mlflow.create_experiment(name = new_Experiment)
+if mlflow.get_experiment_by_name(new_Experiment) == None:
+    experiment_id = mlflow.create_experiment(name = new_Experiment)
 
 mlflow.set_experiment(new_Experiment)
 with mlflow.start_run():

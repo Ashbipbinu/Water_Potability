@@ -8,8 +8,8 @@ from sklearn.ensemble import RandomForestClassifier
 
 training_params = {
     'model_training': {
-        'n_estimators': 110,  # Your desired value
-        'max_depth': 10       # Your desired value
+        'n_estimators': 130,  # Your desired value
+        'max_depth': 15       # Your desired value
     }
 }
 
