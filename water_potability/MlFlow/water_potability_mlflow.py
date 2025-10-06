@@ -12,6 +12,8 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import dagshub
+dagshub.init(repo_owner='Ashbipbinu', repo_name='Water_Potability', mlflow=True)
 
 
 mlflow.set_tracking_uri("https://dagshub.com/Ashbipbinu/Water_Potability.mlflow") 
