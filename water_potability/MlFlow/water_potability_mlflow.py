@@ -1,12 +1,16 @@
 import mlflow
-import json
+import mlflow.sklearn
+
 import yaml
 import os
 import pickle
 import pandas as pd
 
 from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
+
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 
@@ -96,4 +100,17 @@ with mlflow.start_run():
     mlflow.log_metric("f1_score", f1_score)
     mlflow.log_metric("precision_score", precision_score)
     mlflow.log_metric("recall_score", recall_score)
+
+    plt.figure(figsize=(5,5))
+    cm = confusion_matrix(y_test, y_pred)
+    sns.heatmap(cm, annot=True)
+    plt.xlabel("Predicted")
+    plt.ylabel("Actual")
+    plt.title("Confusion matrix")
+
+    plt.savefig("confusion_metrix.png")
+
+    mlflow.log_artifact("confusion_metrix.png")
+
+    mlflow.sklearn.load_model(clf, "GradientBoostingClassifier")
 

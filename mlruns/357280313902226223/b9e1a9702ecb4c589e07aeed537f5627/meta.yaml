@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/357280313902226223/b9e1a9702ecb4c589e07aeed537f5627/artifacts
+end_time: 1759752990157
+entry_point_name: ''
+experiment_id: '357280313902226223'
+lifecycle_stage: active
+run_id: b9e1a9702ecb4c589e07aeed537f5627
+run_name: unique-whale-555
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759752961692
+status: 3
+tags: []
+user_id: LENOVO
