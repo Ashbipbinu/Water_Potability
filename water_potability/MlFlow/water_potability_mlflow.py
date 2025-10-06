@@ -111,6 +111,11 @@ with mlflow.start_run():
     plt.savefig("confusion_metrix.png")
 
     mlflow.log_artifact("confusion_metrix.png")
+    mlflow.log_artifact(__file__)
 
-    mlflow.sklearn.load_model(clf, "GradientBoostingClassifier")
+    mlflow.sklearn.log_model(clf, "GradientBoostingClassifier")
+
+    mlflow.set_tag("author", "Ashbi")
+    mlflow.set_tags({"model" : "GradientBoostingClassifier", "Experiment" : "Water_Potability_Classification"})
+
 

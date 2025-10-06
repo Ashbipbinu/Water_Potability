@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/357280313902226223/d88346257c0d41f7a0c399fe69eda237/artifacts
+end_time: 1759774527621
+entry_point_name: ''
+experiment_id: '357280313902226223'
+lifecycle_stage: active
+run_id: d88346257c0d41f7a0c399fe69eda237
+run_name: bold-auk-562
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759774481543
+status: 3
+tags: []
+user_id: LENOVO

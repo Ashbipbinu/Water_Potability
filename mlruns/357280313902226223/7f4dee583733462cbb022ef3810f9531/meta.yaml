@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/357280313902226223/7f4dee583733462cbb022ef3810f9531/artifacts
+end_time: 1759776707727
+entry_point_name: ''
+experiment_id: '357280313902226223'
+lifecycle_stage: active
+run_id: 7f4dee583733462cbb022ef3810f9531
+run_name: whimsical-grouse-445
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759776662834
+status: 3
+tags: []
+user_id: LENOVO
