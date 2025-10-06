@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1b8a043d6db24b82b60f478b15799e54/artifacts
+deleted_time: 1759738100858
+end_time: 1759735774222
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 1b8a043d6db24b82b60f478b15799e54
+run_name: able-hare-548
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759735773910
+status: 3
+tags: []
+user_id: LENOVO

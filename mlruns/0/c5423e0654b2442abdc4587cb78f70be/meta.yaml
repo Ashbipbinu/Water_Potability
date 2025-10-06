@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/c5423e0654b2442abdc4587cb78f70be/artifacts
+end_time: 1759731959703
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c5423e0654b2442abdc4587cb78f70be
+run_name: overjoyed-steed-237
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759731958782
+status: 3
+tags: []
+user_id: LENOVO

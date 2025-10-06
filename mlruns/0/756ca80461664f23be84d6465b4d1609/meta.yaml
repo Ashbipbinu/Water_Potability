@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/756ca80461664f23be84d6465b4d1609/artifacts
+deleted_time: 1759738100792
+end_time: 1759735801410
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 756ca80461664f23be84d6465b4d1609
+run_name: industrious-bird-123
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759735801029
+status: 3
+tags: []
+user_id: LENOVO

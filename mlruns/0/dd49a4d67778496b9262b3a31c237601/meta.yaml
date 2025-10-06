@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/dd49a4d67778496b9262b3a31c237601/artifacts
+deleted_time: 1759738100747
+end_time: 1759735517421
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: dd49a4d67778496b9262b3a31c237601
+run_name: magnificent-bird-892
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759735516826
+status: 4
+tags: []
+user_id: LENOVO

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9268e8b94faf43c6b0c46a06ce894246/artifacts
+deleted_time: 1759738100783
+end_time: 1759736571642
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9268e8b94faf43c6b0c46a06ce894246
+run_name: gifted-owl-75
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759736571359
+status: 3
+tags: []
+user_id: LENOVO

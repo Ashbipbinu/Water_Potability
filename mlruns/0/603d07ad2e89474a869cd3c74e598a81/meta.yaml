@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/603d07ad2e89474a869cd3c74e598a81/artifacts
+end_time: 1759728888903
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 603d07ad2e89474a869cd3c74e598a81
+run_name: angry-shoat-151
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759728887816
+status: 3
+tags: []
+user_id: LENOVO

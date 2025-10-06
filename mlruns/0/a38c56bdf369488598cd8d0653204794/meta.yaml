@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a38c56bdf369488598cd8d0653204794/artifacts
+deleted_time: 1759738100747
+end_time: 1759736058685
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: a38c56bdf369488598cd8d0653204794
+run_name: enthused-skunk-714
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759736058373
+status: 3
+tags: []
+user_id: LENOVO

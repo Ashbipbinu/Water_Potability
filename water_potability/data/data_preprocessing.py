@@ -14,8 +14,9 @@ def check_for_missing_values(data: pd.DataFrame):
 
     for col in data_copy.columns:
         if data_copy[col].isna().any():
+            print("Found missing values")
             mean_value = data_copy[col].mean()
-            data_copy[col] = data_copy[col].fillna(mean_value, inplace=True)
+            data_copy[col] = data_copy[col].fillna(mean_value)
     
     return data_copy
     

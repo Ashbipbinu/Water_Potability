@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/fc534b25043d4872861ef683d3c2c002/artifacts
+deleted_time: 1759738100747
+end_time: 1759735676520
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: fc534b25043d4872861ef683d3c2c002
+run_name: legendary-shad-486
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759735676049
+status: 4
+tags: []
+user_id: LENOVO

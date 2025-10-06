@@ -6,6 +6,19 @@ import yaml
 from sklearn.ensemble import RandomForestClassifier
 
 
+training_params = {
+    'model_training': {
+        'n_estimators': 110,  # Your desired value
+        'max_depth': 10       # Your desired value
+    }
+}
+
+def save_params(params_dict, file_path='params.yaml'):
+
+    with open(file_path, 'w') as file:
+        yaml.dump(params_dict, file, default_flow_style=False)
+
+
 with open('params.yaml', 'r') as file:
     params = yaml.safe_load(file)
 
@@ -38,6 +51,8 @@ def saving_model(model):
 
 def main():
 
+    save_params(training_params)
+
     print("Loading the data")
     file_path = os.path.join(os.getcwd(), 'data', 'processed', 'train_processed_mean.csv')
     train_data = load_data(file_path)
@@ -45,10 +60,11 @@ def main():
     print("Splitting the data into features and target")
     X_train, y_train = splitting_data_to_XY(train_data)
 
+    print(f"Training the model with parameters n_estimator: {n_estimator} and max_depth: {max_depth}")
     rf = RandomForestClassifier(n_estimators=n_estimator, max_depth=max_depth)
 
     print("Model training started")   
-    model = model_training(rf,X_train, y_train)   
+    model = model_training(rf, X_train, y_train)   
 
     print("Saving the model") 
     saving_model(model)

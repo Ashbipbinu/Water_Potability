@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/cec366f6f2604a2d9f9f8e872e8cd525/artifacts
+deleted_time: 1759738100792
+end_time: 1759736411337
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: cec366f6f2604a2d9f9f8e872e8cd525
+run_name: capable-shark-611
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759736410975
+status: 3
+tags: []
+user_id: LENOVO
