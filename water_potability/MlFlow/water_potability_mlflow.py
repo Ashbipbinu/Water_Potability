@@ -119,5 +119,3 @@ with mlflow.start_run():
 
     mlflow.set_tag("author", "Ashbi")
     mlflow.set_tags({"model" : "GradientBoostingClassifier", "Experiment" : "Water_Potability_Classification"})
-
-
