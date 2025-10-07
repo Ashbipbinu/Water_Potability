@@ -56,6 +56,9 @@ with mlflow.start_run():
     clf = GradientBoostingClassifier(n_estimators=n_estimators, max_depth=max_depth)
     model = model_training(clf, X_train, y_train)
 
+    with open('gradient.pkl', 'wb') as file:
+        pickle.dump(clf, file)
+
     mlflow.log_param("n_estimators", n_estimators)
     mlflow.log_param("max_depth", max_depth)
 
@@ -115,7 +118,7 @@ with mlflow.start_run():
     mlflow.log_artifact("confusion_metrix.png")
     mlflow.log_artifact(__file__)
 
-    mlflow.sklearn.log_model(clf, "GradientBoostingClassifier")
+    mlflow.sklearn.log_model('gradient.pkl', "GradientBoostingClassifier")
 
     mlflow.set_tag("author", "Ashbi")
     mlflow.set_tags({"model" : "GradientBoostingClassifier", "Experiment" : "Water_Potability_Classification"})
