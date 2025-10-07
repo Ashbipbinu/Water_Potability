@@ -108,9 +108,9 @@ with mlflow.start_run():
     plt.savefig("confusion_metrix.png")
 
     mlflow.log_artifact("confusion_metrix.png")
-    mlflow.log_artifact(__file__)
+    mlflow.sklearn.log_model(clf, "GradientBoostingClassifier")
 
-    mlflow.sklearn.log_model(clf)
+    mlflow.log_artifact(__file__)
 
 
     mlflow.set_tag("author", "Ashbi")
