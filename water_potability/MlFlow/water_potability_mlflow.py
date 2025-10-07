@@ -109,7 +109,12 @@ with mlflow.start_run():
     plt.savefig("confusion_metrix.png")
 
     mlflow.log_artifact("confusion_metrix.png")
-    mlflow.sklearn.log_model(clf, "RandomForestClassifier")
+    model_path = "random_forest_model.pkl"
+    
+    with open(model_path, "wb") as f:
+        pickle.dump(clf, f)
+    
+    mlflow.log_artifact(model_path)
 
     mlflow.log_artifact(__file__)
 
