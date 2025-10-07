@@ -108,7 +108,12 @@ with mlflow.start_run():
     plt.savefig("confusion_metrix.png")
 
     mlflow.log_artifact("confusion_metrix.png")
-    mlflow.sklearn.log_model(clf, "GradientBoostingClassifier")
+
+with open("GradientBoostingClassifier.pkl", "wb") as f:
+    pickle.dump(clf, f)
+
+    mlflow.log_artifact("GradientBoostingClassifier.pkl")
+
 
     mlflow.log_artifact(__file__)
 
