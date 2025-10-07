@@ -6,24 +6,25 @@ import os
 import pickle
 import pandas as pd
 
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 import dagshub
+
 dagshub.init(repo_owner='Ashbipbinu', repo_name='Water_Potability', mlflow=True)
-
-
-mlflow.set_tracking_uri("https://dagshub.com/Ashbipbinu/Water_Potability.mlflow") 
-
-new_Experiment = "Water_Potability_Classification"
+new_Experiment = "Water_Potability_Classification-2"
 
 if mlflow.get_experiment_by_name(new_Experiment) == None:
     experiment_id = mlflow.create_experiment(name = new_Experiment)
 
 mlflow.set_experiment(new_Experiment)
+
+mlflow.set_tracking_uri("https://dagshub.com/Ashbipbinu/Water_Potability.mlflow") 
+
+
 with mlflow.start_run():
 
     params_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'params.yaml')
@@ -53,7 +54,7 @@ with mlflow.start_run():
     n_estimators = params['model_training']['n_estimators']
     max_depth = params['model_training']['max_depth']
 
-    clf = GradientBoostingClassifier(n_estimators=n_estimators, max_depth=max_depth)
+    clf = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth)
     model = model_training(clf, X_train, y_train)
 
 
@@ -108,7 +109,7 @@ with mlflow.start_run():
     plt.savefig("confusion_metrix.png")
 
     mlflow.log_artifact("confusion_metrix.png")
-    mlflow.sklearn.log_model(clf, "GradientBoostingClassifier")
+    mlflow.sklearn.log_model(clf, "RandomForestClassifier")
 
     mlflow.log_artifact(__file__)
 
