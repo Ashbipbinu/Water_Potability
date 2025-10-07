@@ -16,7 +16,7 @@ import dagshub
 dagshub.init(repo_owner='Ashbipbinu', repo_name='Water_Potability', mlflow=True)
 
 
-mlflow.set_tracking_uri("https://dagshub.com/Ashbipbinu/Water_Potability.mlflow/") 
+mlflow.set_tracking_uri("https://dagshub.com/Ashbipbinu/Water_Potability.mlflow") 
 
 new_Experiment = "Water_Potability_Classification"
 
@@ -108,11 +108,7 @@ with mlflow.start_run():
     plt.savefig("confusion_metrix.png")
 
     mlflow.log_artifact("confusion_metrix.png")
-
-
-
-    mlflow.sklearn.log_model(clf, "GradientBoostingClassifier.pkl")
-
+    mlflow.sklearn.log_model(clf, "GradientBoostingClassifier")
 
     mlflow.log_artifact(__file__)
 
