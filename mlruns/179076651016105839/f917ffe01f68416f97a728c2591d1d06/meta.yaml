@@ -1,0 +1,14 @@
+artifact_uri: file:///F:/Water_Potability/mlruns/179076651016105839/f917ffe01f68416f97a728c2591d1d06/artifacts
+end_time: 1759904805419
+entry_point_name: ''
+experiment_id: '179076651016105839'
+lifecycle_stage: active
+run_id: f917ffe01f68416f97a728c2591d1d06
+run_name: dapper-lamb-259
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759904782334
+status: 3
+tags: []
+user_id: LENOVO

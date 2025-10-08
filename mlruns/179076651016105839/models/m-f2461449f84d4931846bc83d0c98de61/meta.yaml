@@ -1,0 +1,10 @@
+artifact_location: file:///F:/Water_Potability/mlruns/179076651016105839/models/m-f2461449f84d4931846bc83d0c98de61/artifacts
+creation_timestamp: 1759904662020
+experiment_id: '179076651016105839'
+last_updated_timestamp: 1759904696370
+model_id: m-f2461449f84d4931846bc83d0c98de61
+model_type: ''
+name: model
+source_run_id: 8e3fafe8155646d198dcc02235d628de
+status: 2
+status_message: null
