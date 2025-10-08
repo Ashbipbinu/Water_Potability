@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/Water_Potability/mlruns/179076651016105839/7f2611f53adb42a4a0e30a724ffaaf22/artifacts
+deleted_time: 1759916805191
+end_time: 1759914901775
+entry_point_name: ''
+experiment_id: '179076651016105839'
+lifecycle_stage: deleted
+run_id: 7f2611f53adb42a4a0e30a724ffaaf22
+run_name: Random Forest Tuning
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759914433838
+status: 4
+tags: []
+user_id: LENOVO

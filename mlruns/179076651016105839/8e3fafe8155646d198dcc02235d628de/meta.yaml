@@ -1,8 +1,9 @@
 artifact_uri: file:///F:/Water_Potability/mlruns/179076651016105839/8e3fafe8155646d198dcc02235d628de/artifacts
+deleted_time: 1759907755150
 end_time: 1759904700788
 entry_point_name: ''
 experiment_id: '179076651016105839'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 8e3fafe8155646d198dcc02235d628de
 run_name: luxuriant-smelt-722
 source_name: ''

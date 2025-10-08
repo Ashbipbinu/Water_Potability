@@ -1,0 +1,14 @@
+artifact_uri: file:///F:/Water_Potability/mlruns/179076651016105839/a646eecae4b94c20b43d3a9cf47f9595/artifacts
+end_time: 1759921566484
+entry_point_name: ''
+experiment_id: '179076651016105839'
+lifecycle_stage: active
+run_id: a646eecae4b94c20b43d3a9cf47f9595
+run_name: 'Combination 54:'
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759921566245
+status: 3
+tags: []
+user_id: LENOVO

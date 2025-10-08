@@ -1,0 +1,22 @@
+artifact_path: file:///F:/Water_Potability/mlruns/179076651016105839/models/m-ce858eb13625497a8b5bc70526cae962/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+mlflow_version: 3.3.2
+model_id: m-ce858eb13625497a8b5bc70526cae962
+model_size_bytes: 54677043
+model_uuid: m-ce858eb13625497a8b5bc70526cae962
+prompts: null
+run_id: 925a470c4a234bfba7b90cc7c9af38d5
+utc_time_created: '2025-10-08 10:04:29.795539'

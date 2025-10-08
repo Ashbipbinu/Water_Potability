@@ -1,0 +1,15 @@
+artifact_uri: file:///F:/Water_Potability/mlruns/179076651016105839/dd9f152195ef4522946444142926311b/artifacts
+deleted_time: 1759916805219
+end_time: 1759908198427
+entry_point_name: ''
+experiment_id: '179076651016105839'
+lifecycle_stage: deleted
+run_id: dd9f152195ef4522946444142926311b
+run_name: clean-sloth-497
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759907737801
+status: 4
+tags: []
+user_id: LENOVO
