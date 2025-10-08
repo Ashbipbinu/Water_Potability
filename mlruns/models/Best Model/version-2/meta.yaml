@@ -1,0 +1,18 @@
+aliases: []
+creation_timestamp: 1759947229993
+current_stage: Staging
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1759947546031
+metrics: null
+model_id: null
+name: Best Model
+params: null
+run_id: null
+run_link: null
+source: run://7930fc7ca8b24298bb9b28732e72524a/file:///F:/Water_Potability/mlruns/179076651016105839/models/m-00c4def450c143eaa91383cc9ac299d5/artifacts/MLmodel
+status: READY
+status_message: null
+storage_location: run://7930fc7ca8b24298bb9b28732e72524a/file:///F:/Water_Potability/mlruns/179076651016105839/models/m-00c4def450c143eaa91383cc9ac299d5/artifacts/MLmodel
+user_id: null
+version: 2
