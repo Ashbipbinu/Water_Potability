@@ -1,0 +1,34 @@
+artifact_path: file:///F:/Water_Potability/mlruns/179076651016105839/models/m-ec3e4f0915914333a747a0da17329b28/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-ec3e4f0915914333a747a0da17329b28
+model_size_bytes: 6108877
+model_uuid: m-ec3e4f0915914333a747a0da17329b28
+prompts: null
+run_id: 23c59c33090c46a8b3c0b93282ba985c
+signature:
+  inputs: '[{"type": "double", "name": "ph", "required": true}, {"type": "double",
+    "name": "Hardness", "required": true}, {"type": "double", "name": "Solids", "required":
+    true}, {"type": "double", "name": "Chloramines", "required": true}, {"type": "double",
+    "name": "Sulfate", "required": true}, {"type": "double", "name": "Conductivity",
+    "required": true}, {"type": "double", "name": "Organic_carbon", "required": true},
+    {"type": "double", "name": "Trihalomethanes", "required": true}, {"type": "double",
+    "name": "Turbidity", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-10-07 10:40:43.205513'

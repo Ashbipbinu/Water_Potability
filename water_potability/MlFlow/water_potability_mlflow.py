@@ -14,7 +14,7 @@ import seaborn as sns
 
 import dagshub
 
-dagshub.init(repo_owner='Ashbipbinu', repo_name='Water_Potability', mlflow=True)
+#dagshub.init(repo_owner='Ashbipbinu', repo_name='Water_Potability', mlflow=True)
 new_Experiment = "Water_Potability_Classification-2"
 
 if mlflow.get_experiment_by_name(new_Experiment) == None:
@@ -22,7 +22,9 @@ if mlflow.get_experiment_by_name(new_Experiment) == None:
 
 mlflow.set_experiment(new_Experiment)
 
-mlflow.set_tracking_uri("https://dagshub.com/Ashbipbinu/Water_Potability.mlflow") 
+#mlflow.set_tracking_uri("https://dagshub.com/Ashbipbinu/Water_Potability.mlflow") 
+mlflow.set_tracking_uri("http://127.0.0.1:5000") 
+
 
 
 with mlflow.start_run():
@@ -89,6 +91,9 @@ with mlflow.start_run():
 
     metrics = evaluation(y_test, y_pred)
 
+    train_df = mlflow.data.from_pandas(load_train_data)
+    test_df = mlflow.data.from_pandas(load_test_data)
+
     accuracy = metrics['accuracy']
     f1_score = metrics['f1_score']
     precision_score = metrics['precision_score']
@@ -118,6 +123,8 @@ with mlflow.start_run():
 
     mlflow.log_artifact(__file__)
 
+    mlflow.log_input(train_df, "train")
+    mlflow.log_input(test_df, "test") 
 
     mlflow.set_tag("author", "Ashbi")
     mlflow.set_tags({"model" : "GradientBoostingClassifier", "Experiment" : "Water_Potability_Classification"})

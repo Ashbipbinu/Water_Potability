@@ -1,0 +1,13 @@
+digest: 149346db
+name: dataset
+profile: '{"num_rows": 656, "num_elements": 5904}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "ph", "required": true}, {"type":
+  "double", "name": "Hardness", "required": true}, {"type": "double", "name": "Solids",
+  "required": true}, {"type": "double", "name": "Chloramines", "required": true},
+  {"type": "double", "name": "Sulfate", "required": true}, {"type": "double", "name":
+  "Conductivity", "required": true}, {"type": "double", "name": "Organic_carbon",
+  "required": true}, {"type": "double", "name": "Trihalomethanes", "required": true},
+  {"type": "double", "name": "Turbidity", "required": true}]}'
+source: '{"tags": {"mlflow.user": "LENOVO", "mlflow.source.name": "water_potability\\mlflow\\mlflow_auto.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "d410870b16312d8b1df58e757640218f48ea6a3f"}}'
+source_type: code
